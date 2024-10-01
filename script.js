@@ -1,4 +1,4 @@
-const apiUrl = 'news.json'; // Ensure this points to the correct path
+const apiUrl = 'news.json'; 
 const fetchNewsBtn = document.getElementById('fetchNewsBtn');
 const newsContainer = document.getElementById('newsContainer');
 let articles = [];
@@ -7,7 +7,7 @@ async function fetchNews() {
     try {
         const response = await fetch(apiUrl); 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`); // Corrected error template string
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
         console.log("Fetched articles:", data.articles);
